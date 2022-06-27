@@ -1,43 +1,53 @@
+/*removes default styling from lists*/
 ul {
     text-decoration: none;
     list-style: none;
     padding: 0;
 }
+/*sets attribute to flex and sets width to 100% of body*/
 .pageContainer {
     display: flex;
     flex-wrap: wrap;
     min-width: 100%;
     margin: 0;
 }
+/*Sets width of header, background color of header, and margin. Positions text to center*/
 .heading {
     text-align: center;
     width: 100%;
     background-color: blue;
     margin-bottom: 5px;
 }
+/*Sets margin and font color of text in header*/
 .heading h1 {
     margin: 5px;
     color:white;
 }
+/*Sets width of sidebar*/
 .sideContainer {
     width: 28%;
 }
+/*Sets width of button within sidebar*/
 .history button{
     width: 90%;
 }
+/*Sets width and margin of container for main content*/
 .mainContainer {
     width: 70%;
     margin-left: 10px;
 }
+/*sets width and border of current day weather within mainContainer*/
 .currentDay {
     width: 100%;
     border: solid;
 }
+/*Sets attribute of future forecast container to flex and aligns content within to center*/
 .futureForecast {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+/*Sets background color, margin, padding, width, and text color of each future weather card within futureWeather*/
 .card {
     background-color: blue;
     margin: 1%;
