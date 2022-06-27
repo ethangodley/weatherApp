@@ -5,28 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <!--Style sheets linked (local and external(water.css))-->
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
+<!--body has class pageContainer to assist with styling-->
 <body class = "pageContainer">
+    <!--Header contains title of webpage, class header is used in css for styling-->
     <header class ="heading">
         <h1>Weather Dashboard</h1>
     </header>
+    <!--Aside is a sidebar that contains elements needed to search for a cities weather forecast-->
+    <!--class sideContainer is used in css for styling purposes-->
     <aside class="sideContainer">
         <h2>Search for a City</h2>
+        <!--input allows user to type in desired weather city. id 'input' is used in javascript for functionality purposes-->
         <input placeholder="city" id="input">
+        <!--Button calls upon getGeoCode function in javascript once clicked.-->
         <button
         type="submit"
             id="search"
             onclick="getGeoCode(event)">Search</button>
+            <!--Creates visible divider-->
         <hr>
+        <!--Section contains previous searches, still requires functionality to be added in javascript. Is currently a placeholder-->
         <section class="history">
             <button>City</button>
         </section>
     </aside>
+    <!--Main contains the current weather, and forecasted weather for the next 5 days, ids and classes used for javascript functionality and styling-->
     <main class="mainContainer">
+        <!--Section contains current weather of selected city-->
         <section class="currentDay">
+            <!--Contains name of selected city-->
             <h2 id="todayTime">city/time</h2>
+            <!--Contains temperature, wind speed, humidity, and uv index of current weather-->
             <ul>
                 <li id="todayTemp">temp: </li>
                 <li id="todayWind">Wind: </li>
@@ -35,6 +48,7 @@
             </ul>
         </section>
         <section class="futureForecast">
+            <!--Each card contains the forecasted weather of a future day (includes temperature, wind, and humidity)-->
             <div class="card">
                 <ul>
                     <li id="date">date: </li>
@@ -92,7 +106,7 @@
             </div>
         </section>
     </main>
-
+<!--Links javascript documents to HTML (local, and external(moment.js and jquery.js))-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./assets/script.js"></script>
