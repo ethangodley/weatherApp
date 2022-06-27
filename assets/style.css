@@ -1,0 +1,47 @@
+ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+.pageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    margin: 0;
+}
+.heading {
+    text-align: center;
+    width: 100%;
+    background-color: blue;
+    margin-bottom: 5px;
+}
+.heading h1 {
+    margin: 5px;
+    color:white;
+}
+.sideContainer {
+    width: 28%;
+}
+.history button{
+    width: 90%;
+}
+.mainContainer {
+    width: 70%;
+    margin-left: 10px;
+}
+.currentDay {
+    width: 100%;
+    border: solid;
+}
+.futureForecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    background-color: blue;
+    margin: 1%;
+    padding:2px;
+    width: 17%;
+    color:white;
+}
