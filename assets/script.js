@@ -64,7 +64,7 @@ function getDailyWeather(geoLocation) {
         for(let i = 0; i < 5; i++) { // for as long as i is less than 5 execute code within
             dailyDate[i].textContent = moment().add(i+1, 'day').format("DD MM YYYY"); // display date of weather forecast using moment.js
             let icon = data.daily[i+1].weather[0].icon; // sets icon id to variable icon from API
-            $(dailyIcon[i]).find("img").attr("src", "http://openweathermap.org/img/wn/"+icon+"@2x.png"); // sets href attribute of img tag in dom to icon link
+            $(dailyIcon[i]).find("img").attr("src", "https://openweathermap.org/img/wn/"+icon+"@2x.png"); // sets href attribute of img tag in dom to icon link
             dailyTemp[i].textContent = JSON.stringify(data.daily[i+1].temp.day) + " °C"; // gets future temp of [i] day from API and displays to dom
             dailyWind[i].textContent = JSON.stringify(data.daily[i+1].wind_speed) + " m/s"; // gets future wind speed of [i] day from API and displays to dom
             dailyHumidity[i].textContent = JSON.stringify(data.daily[i+1].humidity) + " %"; // gets future humidity of [i] day from API and displays to dom
@@ -73,7 +73,7 @@ function getDailyWeather(geoLocation) {
 }
 // displays name of city to currentweather title importing geoLocation
 function displayLocation(geoLocation) {
-    const requestUrl = "http://api.openweathermap.org/geo/1.0/reverse?"+ geoLocation +"&limit=1&appid=1b3b16034189ea5a6560c677be7833f3"; // sets url for fetching api
+    const requestUrl = "https://api.openweathermap.org/geo/1.0/reverse?"+ geoLocation +"&limit=1&appid=1b3b16034189ea5a6560c677be7833f3"; // sets url for fetching api
     fetch(requestUrl) // fetches api using url and executes .then functions
     .then(function (response){
         return response.json();
