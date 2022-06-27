@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body class = "pageContainer">
+    <header class ="heading">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <aside class="sideContainer">
+        <h2>Search for a City</h2>
+        <input placeholder="city" id="input">
+        <button
+        type="submit"
+            id="search"
+            onclick="getGeoCode(event)">Search</button>
+        <hr>
+        <section class="history">
+            <button>City</button>
+        </section>
+    </aside>
+    <main class="mainContainer">
+        <section class="currentDay">
+            <h2 id="todayTime">city/time</h2>
+            <ul>
+                <li id="todayTemp">temp: </li>
+                <li id="todayWind">Wind: </li>
+                <li id="todayHumidity">humidity: </li>
+                <li id="todayUv">UV Index: </li>
+            </ul>
+        </section>
+        <section class="futureForecast">
+            <div class="card">
+                <ul>
+                    <li id="date">date: </li>
+                    <li id="icon">
+                        <img src=""></img>
+                    </li>
+                    <li id="temp">temp: </li>
+                    <li id="wind">Wind: </li>
+                    <li id="humidity">humidity: </li>
+                </ul>
+            </div>
+            <div class="card">
+                <ul>
+                    <li id="date">date: </li>
+                    <li id="icon">
+                        <img src=""></img>
+                    </li>
+                    <li id="temp">temp: </li>
+                    <li id="wind">Wind: </li>
+                    <li id="humidity">humidity: </li>
+                </ul>
+            </div>
+            <div class="card">
+                <ul>
+                    <li id="date">date: </li>
+                    <li id="icon">
+                        <img src=""></img>
+                    </li>
+                    <li id="temp">temp: </li>
+                    <li id="wind">Wind: </li>
+                    <li id="humidity">humidity: </li>
+                </ul>
+            </div>
+            <div class="card">
+                <ul>
+                    <li id="date">date: </li>
+                    <li id="icon">
+                        <img src=""></img>
+                    </li>
+                    <li id="temp">temp: </li>
+                    <li id="wind">Wind: </li>
+                    <li id="humidity">humidity: </li>
+                </ul>
+            </div>
+            <div class="card">
+                <ul>
+                    <li id="date">date: </li>
+                    <li id="icon">
+                        <img src=""></img>
+                    </li>
+                    <li id="temp">temp: </li>
+                    <li id="wind">Wind: </li>
+                    <li id="humidity">humidity: </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
